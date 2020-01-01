@@ -1,122 +1,62 @@
- <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>My Processing Page</title>
-        <script type="text/javascript" src="processing.min.js"></script>
-      </head>
-      <body>
-        <script type="application/processing" target="mysketch">
-		
-		  var pi = 3.14159265359;
+  var pi = 3.14159265359;
 
-		  var canvasX = 400;
-		  var canvasY = 400;
-		  var fov = 90;
+  var canvasX = 400;
+  var canvasY = 400;
+  var fov = 90;
 
-		  var cubeRadius = 200;
-		  var cubeDiameter = cubeRadius * 2;
+  var cubeRadius = 200;
+  var cubeDiameter = cubeRadius * 2;
 
-		      var cubeX = 0;
-		      var cubeY = 0;
-		      var cubeZ = 400;
-		          var plane1X;
-		          var plane1Y;
-		          var plane1Z;
-		              var plane1truX;
-		              var plane1truY;
-		              var plane1truZ;
-		              var plane1Dist;
-		                  var plane1DrawX;
-		                  var plane1DrawY;
-		                  var plane1DrawZ;
-		              /*
-		              var plane1RX;
-		              var plane1RY;
-		              var plane1RZ;
-            
-		              var plane1GX;
-		              var plane1GY;
-		              var plane1GZ;
-		              */
-		          var plane2X;
-		          var plane2Y;
-		          var plane2Z;
-		              var plane2truX;
-		              var plane2truY;
-		              var plane2truZ;
-		              var plane2Dist;
-		                  var plane2DrawX;
-		                  var plane2DrawY;
-		                  var plane2DrawZ;
-                
-		          var plane3X;
-		          var plane3Y;
-		          var plane3Z;
-		              var plane3truX;
-		              var plane3truY;
-		              var plane3truZ;
-		              var plane3Dist;
-		                  var plane3DrawX;
-		                  var plane3DrawY;
-		                  var plane3DrawZ; 
-        
-		      var MouseX;
-		      var MouseY;
-		      var MouseZ;
-		      var MouseA = 0;
-		          var MouseDist;
-		              var MouseDistTerm;
-		  /*var plane1X = 200;
-		  var plane1Y = 200;
-		  var plane1Z= 400;
-		  var plane1dist;
-		  var P1xAngle = 0.5;
-		  var P1yAngle;
+      var cubeX = 0;
+      var cubeY = 0;
+      var cubeZ = 400;
+	  var plane1X;
+	  var plane1Y;
+	  var plane1Z;
+	      var plane1truX;
+	      var plane1truY;
+	      var plane1truZ;
+	      var plane1Dist;
+		  var plane1DrawX;
+		  var plane1DrawY;
+		  var plane1DrawZ;
+	      /*
+	      var plane1RX;
+	      var plane1RY;
+	      var plane1RZ;
 
-		      var RX = 0;
-		      var RY = 0;
-		      var RZ = 400;
-		      var RSize = 0;
-		      var RDist = 0;
-		      var RXDraw = 0;
-		      var RYDraw = 0;
+	      var plane1GX;
+	      var plane1GY;
+	      var plane1GZ;
+	      */
+	  var plane2X;
+	  var plane2Y;
+	  var plane2Z;
+	      var plane2truX;
+	      var plane2truY;
+	      var plane2truZ;
+	      var plane2Dist;
+		  var plane2DrawX;
+		  var plane2DrawY;
+		  var plane2DrawZ;
 
-		      var GX = 0;
-		      var GY = 0;
-		      var GZ = 400;
-		      var GSize = 0;
-		      var GDist = 0;(36000)/(plane1Z*p
-		      var GXDraw = 0;
-		      var GYDraw = 0;
+	  var plane3X;
+	  var plane3Y;
+	  var plane3Z;
+	      var plane3truX;
+	      var plane3truY;
+	      var plane3truZ;
+	      var plane3Dist;
+		  var plane3DrawX;
+		  var plane3DrawY;
+		  var plane3DrawZ; 
 
-		      var BX = 0;
-		      var BY = 0;
-		      var BZ = 400;
-		      var BSize = 0;
-		      var BDist = 400;
-		      var BXDraw = 0;
-		      var BYDraw = 0;
-
-		      var YX = 0;
-		      var YY = 0;
-		      var YZ = 400;
-		      var YSize = 0;
-		      var YDist = 0;
-		      var YXDraw = 0;
-		      var YYDraw = 0;
-    
-		  var plane2X;
-		  var plane2Y = 200;
-		  var plane2Z;
-		  var plane2dist;
-		  var P2xAngle = 0.5;
-		  var P2yAngle;
-
-
-		  var term1 = 360;
-		  var term2;
-		  */
+      var MouseX;
+      var MouseY;
+      var MouseZ;
+      var MouseA = 0;
+	  var MouseDist;
+	      var MouseDistTerm;
 
 void mouseIsPressed() {
   redraw();  // or loop()
@@ -191,7 +131,3 @@ void mouseIsPressed() {
     fill(255, 0, 0);
     
 }
-       </script>
-       <canvas id="mysketch"></canvas>
-     </body>
-	 </html>
